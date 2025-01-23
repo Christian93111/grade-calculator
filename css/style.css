@@ -25,6 +25,7 @@ label {
 
 input[type="text"] , input[type="number"] {
     font-size: 100%;
+    font-weight: bold;
     width: 100%;
     padding: 10px;
 }
