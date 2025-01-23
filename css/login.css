@@ -2,7 +2,6 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
     box-sizing: border-box;
 }
 
@@ -15,16 +14,12 @@ body, html {
     font-size: large;
 }
 
-form {
-    box-shadow: 4px 6px rgba(152, 96, 96, 0.1);
+form, p {
+    box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
     font-weight: bold;
-    padding: 100px;
+    padding: 30px;
     background-color: #f6f6f6;
     border-radius: 10px;
-}
-
-h2, h1 {
-    margin-bottom: 20px;
 }
 
 input[type="text"] , input[type="password"] {
@@ -35,10 +30,6 @@ input[type="text"] , input[type="password"] {
     margin-bottom: 5px;
     font-size: 100%;
     border: none;
-}
-
-a {
-    font-size: 15px;
 }
 
 .login_button {
@@ -55,10 +46,6 @@ a {
     cursor: pointer;
 }
 
-a {
-    text-decoration: none;
-}
-
 hr {
     border: none;
 }
@@ -72,5 +59,19 @@ hr {
     padding: 10px;
     border-radius: 10px;
     font-size: 100%;
+    cursor: pointer;
+}
+
+.back_button {
+    border: none;
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 100%;
+    border-radius: 10px;
     cursor: pointer;
 }
