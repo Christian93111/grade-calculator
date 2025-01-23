@@ -11,7 +11,7 @@
 
 <body>
     <center>
-        <form method="POST and GET">
+        <form method="POST">
 
             <h2>Grade Calculator</h2>
             
@@ -41,6 +41,8 @@
 
             <input type="submit" name="result" value="Calculate"">
         </form>
+
+        <hr>
 
         <form method="get">
             <button type="submit" name="logout" value="true" class="back_button">Logout</button>

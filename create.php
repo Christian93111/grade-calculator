@@ -16,7 +16,7 @@
             <h3>Create New Account</h3>
 
             <input type="text" name="username" placeholder="Enter Username" required>
-            <input type="password" name="password" placeholder="Enter Password" required>
+            <input type="password" name="password" placeholder="Enter Password" pattern=".{8,}" title="at least 8 characters" required>
 
             <hr>
 

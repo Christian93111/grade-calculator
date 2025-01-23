@@ -15,7 +15,7 @@
             <h1>Grade Calculator</h1>
 
             <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="password" placeholder="Password" pattern=".{8,}" title="at least 8 characters" required>
             <button class="login_button" name="login">Login</button>
 
             <hr>
