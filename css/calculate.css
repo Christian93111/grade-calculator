@@ -4,7 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body, html {
+    background-image: url("https://i.pinimg.com/originals/bc/23/b9/bc23b955d467d91ccbcb21ba44dabf17.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    background-attachment: fixed;
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
@@ -12,11 +18,17 @@ body, html {
     flex-wrap: wrap;
     height: 100vh;
 }
+
 form {
-    background-color: #f6f6f6;
-    box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #0000005f;
+    color: #ffffff;
     padding: 20px;
 }
+
+::placeholder {
+    color: #ffffff;
+}
+
 label {
     font-weight: bold;
     display: block;
@@ -24,8 +36,11 @@ label {
 }
 
 input[type="text"] , input[type="number"] {
+    background-color: #f6f6f620;
+    color: #ffffff;
     font-size: 100%;
-    font-weight: bold;
+    text-align: center;
+    border: none;
     width: 100%;
     padding: 10px;
 }
@@ -56,18 +71,16 @@ input[type="submit"] {
 /* ------------ PHP Design ------------ */
 .php {
     font-size: large;
-    background-color: #f6f6f6;
+    background-color: #0000005f;
     margin: 10px;
     padding: 5px;
-    box-shadow: 4px 6px rgb(0, 0, 0, 0.1);
+    color: #ffffff;
 }
 
 .pass {
-    font-weight: bold;
-    color: green;
+    color: #00ff00;
 }
 
 .failed {
-    font-weight: bold;
     color: red;
 }

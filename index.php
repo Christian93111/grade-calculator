@@ -14,14 +14,13 @@
         <form method="post">
 
             <h1>Grade Calculator</h1>
+            <h3>Login</h3>
 
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" pattern=".{8,}" title="at least 8 characters" required>
-            <button class="login_button" name="login">Login</button>
+            <button class="green_button" name="login">Login</button>
 
-            <hr>
-
-            <button onclick="location.href='create.php'" class="create_button" name="create_button">Create new Account</button>
+            <button onclick="location.href='create.php'" class="blue_button" name="create_button">Create new Account</button>
         </form>
 
         <?php
@@ -53,11 +52,10 @@
 
             // Loop through users and check the credentials
             foreach ($users as $user) {
-                // Check if the username and password match
+                // Check if the username and password are match
                 if ($user['username'] === $username && $user['password'] === $password) {
                     $_SESSION['username'] = $username;  // Set session variable
-                    session_regenerate_id(); // Prevent session fixation attacks
-                    header("Location: calculation.php");  // Redirect to the calculation page
+                    header("Location: calculation.php");
                     exit();
                 }
             }

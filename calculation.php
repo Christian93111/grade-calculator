@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade Calculator</title>
-    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\calculate.css">
     <link rel="shortcut icon" href="https://imgs.search.brave.com/OfCCio4siH1eJebWxXApmmatqYi8wuLlVngxOafDAPM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4t/Yi5zYWFzaHViLmNv/bS9pbWFnZXMvYXBw/L3NlcnZpY2VfbG9n/b3MvMTE5LzBlMWZj/ZWYyMzgxNi9tZWRp/dW0ucG5nPzE1Nzc5/MzE4NDM" type="image/x-icon">
 
 </head>
@@ -39,7 +39,7 @@
                 <input type="number" name="f" step="0.01" min="0" max="100" required>
             </label>
 
-            <input type="submit" name="result" value="Calculate"">
+            <input type="submit" name="result" value="Calculate">
         </form>
 
         <hr>
@@ -53,12 +53,12 @@
 
         // If the user is logged in, we need to destroy the session when they exit.
         if (isset($_GET['logout']) && $_GET['logout'] === 'true') {
-            session_destroy(); // Destroy the session
-            header("Location: index.php"); // Redirect to login page
-            exit(); // Ensure no further code is executed
+            session_destroy();
+            header("Location: index.php");
+            exit();
         }
 
-        // If the user is not logged in, redirect to the login page
+        // If the user is not logged in, redirect into index.php page
         if (!isset($_SESSION['username'])) {
             header("Location: index.php");
             exit();
@@ -86,7 +86,7 @@
             echo "<div class='php'>";
             echo "Student Name: <strong>$name</strong>";
             echo "<br>";
-            echo "Average of <strong>Grade</strong> is "."<strong>".number_format($ave, 2) ."%</strong>";
+            echo "Average of Grade is "."<strong>".number_format($ave, 2) ."%</strong>";
             echo "<br>";
             echo "Result: $result";
             echo "</div>";

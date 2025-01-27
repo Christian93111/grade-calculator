@@ -6,6 +6,11 @@
 }
 
 body, html {
+    background-image: url("https://i.pinimg.com/originals/bc/23/b9/bc23b955d467d91ccbcb21ba44dabf17.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    background-attachment: fixed;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -15,16 +20,16 @@ body, html {
 }
 
 form, p {
-    box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
-    font-weight: bold;
     padding: 30px;
-    background-color: #f6f6f6;
     border-radius: 10px;
+    background-color: #0000005f;
 }
 
 input[type="text"] , input[type="password"] {
     padding: 10px;
     width: 100%;
+    background-color: #f6f6f620;
+    color: #ffffff;
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 5px;
@@ -32,28 +37,18 @@ input[type="text"] , input[type="password"] {
     border: none;
 }
 
-.login_button {
-    border: none;
-    color: white;
-    background-color: blue;
-    padding: 10px;
-    display: block;
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 100%;
-    border-radius: 10px;
-    cursor: pointer;
+h1, h3 {
+    color: #ffffff;
 }
 
-hr {
-    border: none;
+::placeholder {
+    color: #ffffff;
 }
 
-.create_button {
+.green_button {
     margin-top: 10px;
     width: 100%;
-    color: white;
+    color: #ffffff;
     background-color: green;
     border: none;
     padding: 10px;
@@ -62,9 +57,9 @@ hr {
     cursor: pointer;
 }
 
-.back_button {
+.blue_button {
     border: none;
-    color: white;
+    color: #ffffff;
     background-color: blue;
     padding: 10px;
     display: block;

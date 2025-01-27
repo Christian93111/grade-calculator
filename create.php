@@ -12,17 +12,15 @@
     <center>
 
         <form method="post">
-            
+
             <h1>Grade Calculator</h1>
             <h3>Create New Account</h3>
 
-            <input type="text" name="username" placeholder="Enter Username" required>
-            <input type="password" name="password" placeholder="Enter Password" pattern=".{8,}" title="at least 8 characters" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" pattern=".{8,}" title="at least 8 characters" required>
 
-            <hr>
-
-            <button class="create_button">Create Account</button>
-            <button onclick="location.href='index.php'" class="back_button" name="back_button">Back</button>
+            <button class="green_button">Create Account</button>
+            <button onclick="location.href='index.php'" class="blue_button" name="back_button">Back</button>
         </form>
 
         <?php
@@ -60,7 +58,7 @@
             // Write the updated users back to the file with formal data
             file_put_contents($file, json_encode($users, JSON_PRETTY_PRINT));
 
-            echo "<p>Account created successfully!</p>";
+            echo "<p style='color:green;'>Account created successfully!</p>";
         }
         ?>
 
