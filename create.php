@@ -10,6 +10,7 @@
 
 <body>
     <center>
+
         <form method="post">
             
             <h1>Grade Calculator</h1>
@@ -22,7 +23,6 @@
 
             <button class="create_button">Create Account</button>
             <button onclick="location.href='index.php'" class="back_button" name="back_button">Back</button>
-
         </form>
 
         <?php
@@ -32,15 +32,21 @@
             $username = $_POST['username'];
             $password = $_POST['password'];
 
-            // Read users from the JSON file, if it exists
-            $file = 'users.json';
+            // Read users data from the JSON file, if it exists
+            $file = 'data/users.json';
             if (file_exists($file)) {
                 $users = json_decode(file_get_contents($file), true);
-            } else {
-                $users = [];  // If the file doesn't exist, initialize an empty array
+
+                if ($users === null) {
+                    $users = [];
+                }
+            } 
+            
+            else {
+                $users = [];  // If the file doesn't exist, create an empty array
             }
 
-            // Check if the username already exists
+            // Check if the username if already exists
             foreach ($users as $user) {
                 if ($user['username'] === $username) {
                     echo "<p style='color:red;'>Account already exists. Please create new one</p>";
@@ -51,13 +57,13 @@
             // Add the new user to the users array
             $users[] = ['username' => $username, 'password' => $password];
 
-            // Write the updated users back to the file
-            file_put_contents($file, json_encode($users));
+            // Write the updated users back to the file with formal data
+            file_put_contents($file, json_encode($users, JSON_PRETTY_PRINT));
 
-            // Display a success message
             echo "<p>Account created successfully!</p>";
         }
         ?>
+
     </center>
 </body>
 

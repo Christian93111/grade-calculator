@@ -10,6 +10,7 @@
 
 <body>
     <center>
+
         <form method="post">
 
             <h1>Grade Calculator</h1>
@@ -26,7 +27,7 @@
         <?php
         session_start();
 
-        // Redirect to calculation page if the user is already logged in
+        // Redirect to calculation page if the user is already logged in. except when the browser is closed and open again it will redirect to login page
         if (isset($_SESSION['username'])) {
             header("Location: calculation.php");
             exit();
@@ -37,14 +38,16 @@
             $password = $_POST['password'];
 
             // Read users from the users.json file
-            $file = 'users.json';
+            $file = 'data/users.json';
             if (file_exists($file) && is_readable($file)) {
                 $users = json_decode(file_get_contents($file), true);
 
                 if ($users === null) {
                     $users = []; // Initialize as empty array if the JSON is malformed or empty
                 }
-            } else {
+            } 
+            
+            else {
                 $users = []; // Initialize as empty array if the file doesn't exist or is unreadable
             }
 
@@ -58,11 +61,11 @@
                     exit();
                 }
             }
-
-            // If no match is found, display an error message
+            
             echo "<p style='color:red;'>Invalid username or password!</p>";
         }
         ?>
+
     </center>
 </body>
 
