@@ -27,8 +27,16 @@
         session_start();
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $username = $_POST['username'];
-            $password = $_POST['password'];
+            $username = htmlspecialchars ($_POST['username']);
+            $password = htmlspecialchars ($_POST['password']);
+
+            if (empty($username) && empty($password)) {
+                header("location: create.php");
+            }
+
+            else {
+                header("location: create.php");
+            }
 
             // Read users data from the JSON file, if it exists
             $file = 'data/users.json';
@@ -58,7 +66,7 @@
             // Write the updated users back to the file with formal data
             file_put_contents($file, json_encode($users, JSON_PRETTY_PRINT));
 
-            echo "<p style='color:green;'>Account created successfully!</p>";
+            echo "<p style='color:#4dff00;'>Account created successfully!</p>";
         }
         ?>
 

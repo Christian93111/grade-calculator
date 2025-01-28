@@ -33,8 +33,18 @@
         }
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $username = $_POST['username'];
-            $password = $_POST['password'];
+            $username = htmlspecialchars ($_POST['username']);
+            $password = htmlspecialchars ($_POST['password']);
+
+            // Checks if the form is empty or not
+            if (empty($username) && empty($password)) {
+                header("location: index.php");
+            }
+
+            else {
+                header("location: index.php");
+            }
+        
 
             // Read users from the users.json file
             $file = 'data/users.json';
